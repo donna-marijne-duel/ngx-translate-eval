@@ -6,12 +6,12 @@ import {
   TranslatePipe,
   TranslateService,
 } from "@ngx-translate/core";
-import deDE from "../../public/i18n/de-DE.json";
-import enGB from "../../public/i18n/en-GB.json";
-import enUSVictoriasSecret from "../../public/i18n/en-US-victoriassecret.json";
-import enUS from "../../public/i18n/en-US.json";
-import deDERabanne from "../../public/i18n/partial/de-DE-rabanne.json";
-import enUSRabanne from "../../public/i18n/partial/en-US-rabanne.json";
+// import deDE from "../../public/i18n/de-DE.json";
+// import enGB from "../../public/i18n/en-GB.json";
+// import enUSVictoriasSecret from "../../public/i18n/en-US-victoriassecret.json";
+// import enUS from "../../public/i18n/en-US.json";
+// import deDERabanne from "../../public/i18n/partial/de-DE-rabanne.json";
+// import enUSRabanne from "../../public/i18n/partial/en-US-rabanne.json";
 
 @Component({
   standalone: true,
@@ -35,23 +35,30 @@ export class AppComponent {
       "en-GB",
       "en-US",
       "en-US-victoriassecret",
-      "de-DE-rabanne",
-      "en-US-rabanne",
+      // "de-DE-rabanne",
+      // "en-US-rabanne",
     ]);
 
-    this.translate.setTranslation("de-DE", deDE);
-    this.translate.setTranslation("en-GB", enGB);
-    this.translate.setTranslation("en-US", enUS);
-    this.translate.setTranslation("en-US-victoriassecret", enUSVictoriasSecret);
-    this.translate.setTranslation("en-US-rabanne", enUSRabanne);
-    this.translate.setTranslation("de-DE-rabanne", deDERabanne);
-
-    this.translate.setDefaultLang("en-US");
+    // this.translate.setDefaultLang("en-US");
 
     this.translate.use("en-US");
   }
 
-  changeLanguage(language: string): void {
-    this.translate.use(language);
-  }
+  // private initStatic(): void {
+  //   this.translate.addLangs([
+  //     "de-DE",
+  //     "en-GB",
+  //     "en-US",
+  //     "en-US-victoriassecret",
+  //     "de-DE-rabanne",
+  //     "en-US-rabanne",
+  //   ]);
+
+  //   this.translate.setTranslation("de-DE", deDE);
+  //   this.translate.setTranslation("en-GB", enGB);
+  //   this.translate.setTranslation("en-US", enUS);
+  //   this.translate.setTranslation("en-US-victoriassecret", enUSVictoriasSecret);
+  //   this.translate.setTranslation("en-US-rabanne", enUSRabanne);
+  //   this.translate.setTranslation("de-DE-rabanne", deDERabanne);
+  // }
 }

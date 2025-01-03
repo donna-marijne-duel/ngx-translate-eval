@@ -7,30 +7,18 @@
   }
 </select>
 
-<li>
-  <ul>
-    {{
-      "app.one" | translate
-    }}
-  </ul>
+<ul>
+  <li>{{ "app.one" | translate }}</li>
 
-  <ul>
-    {{
-      two | async
-    }}
-  </ul>
+  <li>{{ two | async }}</li>
 
-  <ul translate="app.three"></ul>
+  <li translate="app.three"></li>
 
-  <ul>
-    {{
-      "app.hello" | translate: { name }
-    }}
-  </ul>
+  <li>{{ "app.hello" | translate: { name } }}</li>
 
-  <ul translate="app.time" [translateParams]="{ time }"></ul>
+  <li translate="app.time" [translateParams]="{ time }"></li>
 
-  <ul [innerHTML]="welcome | async"></ul>
+  <li [innerHTML]="welcome | async"></li>
 
-  <ul [innerHTML]="'app.copyright' | translate: { copyrightYear }"></ul>
-</li>
+  <li [innerHTML]="'app.copyright' | translate: { copyrightYear }"></li>
+</ul>
