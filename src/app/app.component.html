@@ -1,13 +1,36 @@
+<select
+  [ngModel]="translate.currentLang"
+  (ngModelChange)="translate.use($event)"
+>
+  @for (language of translate.langs; track language) {
+    <option [value]="language">{{ language }}</option>
+  }
+</select>
+
 <li>
   <ul>
     {{
       "app.one" | translate
     }}
   </ul>
+
   <ul>
     {{
       two | async
     }}
   </ul>
+
   <ul translate="app.three"></ul>
+
+  <ul>
+    {{
+      "app.hello" | translate: { name }
+    }}
+  </ul>
+
+  <ul translate="app.time" [translateParams]="{ time }"></ul>
+
+  <ul [innerHTML]="welcome | async"></ul>
+
+  <ul [innerHTML]="'app.copyright' | translate: { copyrightYear }"></ul>
 </li>

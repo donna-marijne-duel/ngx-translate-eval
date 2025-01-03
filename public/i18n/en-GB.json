@@ -1,0 +1,9 @@
+{
+  "app.one": "One",
+  "app.hello": "Wotcher, {{name}}!",
+  "app.copyright": "© {{copyrightYear}} All Rights Reserved",
+  "app.three": "Three",
+  "app.time": "Loaded in {{time}} seconds",
+  "app.two": "Two",
+  "app.welcome": "Welcome to your <strong>new portal</strong>, {{name}}!"
+}

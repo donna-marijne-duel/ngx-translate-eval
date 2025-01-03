@@ -1,0 +1,4 @@
+{
+  "app.hello": "Hello, valued Rabanne customer {{name}}!",
+  "app.welcome": "Welcome to the <strong>Rabanne portal</strong>, {{name}}!"
+}
