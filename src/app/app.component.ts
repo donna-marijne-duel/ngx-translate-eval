@@ -31,15 +31,13 @@ export class AppComponent {
 
   constructor() {
     this.translate.addLangs([
+      "de-DE-rabanne",
       "de-DE",
       "en-GB",
-      "en-US",
+      "en-US-rabanne",
       "en-US-victoriassecret",
-      // "de-DE-rabanne",
-      // "en-US-rabanne",
+      "en-US",
     ]);
-
-    // this.translate.setDefaultLang("en-US");
 
     this.translate.use("en-US");
   }
