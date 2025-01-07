@@ -4,10 +4,15 @@ import { provideRouter } from "@angular/router";
 import { provideTranslateService, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { routes } from "./app.routes";
+import { CustomTranslateLoader } from "./custom-translate-loader";
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
   http: HttpClient,
 ) => new TranslateHttpLoader(http, "./i18n/", ".json");
+
+const customLoaderFactory: (http: HttpClient) => CustomTranslateLoader = (
+  http: HttpClient,
+) => new CustomTranslateLoader(http);
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,11 +20,19 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     // provideTranslateService({ defaultLanguage: 'en-US' }),
     provideHttpClient(),
+    // provideTranslateService({
+    //   useDefaultLang: false,
+    //   loader: {
+    //     provide: TranslateLoader,
+    //     useFactory: httpLoaderFactory,
+    //     deps: [HttpClient],
+    //   },
+    // }),
     provideTranslateService({
       useDefaultLang: false,
       loader: {
         provide: TranslateLoader,
-        useFactory: httpLoaderFactory,
+        useFactory: customLoaderFactory,
         deps: [HttpClient],
       },
     }),

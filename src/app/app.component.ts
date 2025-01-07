@@ -37,6 +37,8 @@ export class AppComponent {
       "en-US-rabanne",
       "en-US-victoriassecret",
       "en-US",
+      "es-ES",
+      "es-ES-rabanne",
     ]);
 
     this.translate.use("en-US");

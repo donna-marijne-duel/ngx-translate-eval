@@ -1,0 +1,9 @@
+{
+  "app.one": "Uno",
+  "app.hello": "Hola, {{name}}!",
+  "app.copyright": "© {{copyrightYear}} reservados todos los derechos",
+  "app.three": "Tres",
+  "app.time": "Cargado en {{time}} segundos",
+  "app.two": "Dos",
+  "app.welcome": "Bienvenido a tu <strong>portal nuevo</strong>, {{name}}!"
+}
